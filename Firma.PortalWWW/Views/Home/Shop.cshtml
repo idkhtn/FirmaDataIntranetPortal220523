@@ -1,21 +1,27 @@
-﻿
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    Layout = null;
+}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-@*    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />*@
+    <title>Tech2etc Ecommerce Tutorial</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
 
-   @*<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />*@
-<title>Shop</title>
-
-    <!-- CSS  -->
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="~/lib/materialize/css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="~/lib/materialize/css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
-    
+
     <title>Tech2etc Ecommerce Tutorial</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
 
@@ -23,98 +29,6 @@
 </head>
 
 <body>
-@*    ---------------NAVIGACJA---------------*@ 
-
-@*   <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container">
-            <a id="logo-container" href="#" class="brand-logo">Logo</a>
-            <ul class="right hide-on-med-and-down">
-                <li>@Html.ActionLink("Strona główna","Index","Home")</li>
-                <li>@Html.ActionLink("Kontakt","Kontakt","Home")</li>
-                <li></li>
-            </ul>
-
-            <ul id="nav-mobile" class="sidenav">
-                <li><a href="#">Navbar Link</a></li>
-            </ul>
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        </div>
-    </nav>*@
-
-    <div class="section no-pad-bot" id="index-banner">
-        <div class="container">
-          @RenderBody()
-        </div>
-    </div>
-
-
-    @*<div class="container">
-        <div class="section">
-
-            <!--   Icon Section   -->
-            <div class="row">
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-                        <h5 class="center">O firmie</h5>
-                        <p class="light">Tu będzie tekst o firmie</p>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-                        <h5 class="center">O towarach</h5>
-                        <p class="light">Tu bedzie tekst o towarach</p>
-                    </div>
-                </div>
-
-                <div class="col s12 m4">
-                    <div class="icon-block">
-                        <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-                        <h5 class="center">O sklepie</h5>
-                        <p class="light">Tu będzie tekst o sklepie</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <br><br>
-    </div>
-
-    <footer class="page-footer orange">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">WSB-NLU</h5>
-                    <p class="grey-text text-lighten-4">Projekt realizowany w ramach kursu WSB-NLU</p>
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Dodatkowe informacje</h5>
-                    <ul>
-                        <li>@Html.ActionLink("Polityka prywatnosci","Privacy","Home")</li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Connect</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                Made by WSB-NLU</a>
-            </div>
-        </div>
-    </footer>*@
 
     <section id="header">
         <a href="#"><img src="~/img/logo.png" class="logo" alt=""></a>
@@ -127,7 +41,7 @@
                 <li> @Html.ActionLink("Blog","Blog","Home")</li>
                 <li> @Html.ActionLink("About","About","Home")</li>
                 <li>@Html.ActionLink("Contact","Contact","Home")</li>
-               
+
                 <li id="lg-bag"><a asp-controller="Home" asp-action="Cart"><i class="far fa-shopping-bag"></i></a></li>
                 <a href="#" id="close"><i class="far fa-times"></i></a>
             </ul>
@@ -138,46 +52,17 @@
         </div>
     </section>
 
-    <section id="hero">
-        <h4>Trade-in-offer</h4>
-        <h2>Super value deals</h2>
-        <h1>On all products</h1>
-        <p>Save more with coupons & up to 70% off! </p>
-        <button>Shop Now</button>
-    </section>
+    <section id="page-header">
 
-    <section id="feature" class="section-p1">
-        <div class="fe-box">
-            <img src="~/img/features/f1.png" alt="">
-            <h6>Free Shipping</h6>
-        </div>
-        <div class="fe-box">
-            <img src="~/img/features/f2.png" alt="">
-            <h6>Online Order</h6>
-        </div>
-        <div class="fe-box">
-            <img src="~/img/features/f3.png" alt="">
-            <h6>Save Money</h6>
-        </div>
-        <div class="fe-box">
-            <img src="~/img/features/f4.png" alt="">
-            <h6>Promotions</h6>
-        </div>
-        <div class="fe-box">
-            <img src="~/img/features/f5.png" alt="">
-            <h6>Happy Sell</h6>
-        </div>
-        <div class="fe-box">
-            <img src="~/img/features/f6.png" alt="">
-            <h6>F24/7 Support</h6>
-        </div>
+        <h2>#stayhome</h2>
+
+        <p>Save more with coupons & up to 70% off!</p>
+
     </section>
 
     <section id="product1" class="section-p1">
-        <h2>Featured Products</h2>
-        <p>Summer Collection New Morden Design</p>
         <div class="pro-container">
-            <div class="pro">
+            <div class="pro" onclick="window.location.href='sproduct.html';">
                 <img src="~/img/products/f1.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
@@ -305,19 +190,7 @@
                 </div>
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
-        </div>
-    </section>
 
-    <section id="banner" class="section-m1">
-        <h4>Repair Services </h4>
-        <h2>Up to <span>70% Off</span> – All t-Shirts & Accessories</h2>
-        <button class="normal">Explore More</button>
-    </section>
-
-    <section id="product1" class="section-p1">
-        <h2>New Arrivals</h2>
-        <p>Summer Collection New Morden Design</p>
-        <div class="pro-container">
             <div class="pro">
                 <img src="~/img/products/n1.jpg" alt="">
                 <div class="des">
@@ -351,7 +224,7 @@
                 <a href="#"><i class="fal fa-shopping-cart cart"></i></a>
             </div>
             <div class="pro">
-                <img src="img/products/n3.jpg" alt="">
+                <img src="~/img/products/n3.jpg" alt="">
                 <div class="des">
                     <span>adidas</span>
                     <h5>Cartoon Astronaut T-Shirts</h5>
@@ -449,34 +322,10 @@
         </div>
     </section>
 
-    <section id="sm-banner" class="section-p1">
-        <div class="banner-box">
-            <h4>crazy deals</h4>
-            <h2>buy 1 get 1 free</h2>
-            <span>The best classic dress is on sale at cara</span>
-            <button class="white">Learn More</button>
-        </div>
-        <div class="banner-box banner-box2">
-            <h4>spring/summer</h4>
-            <h2>upcomming season</h2>
-            <span>The best classic dress is on sale at cara</span>
-            <button class="white">Collection</button>
-        </div>
-    </section>
-
-    <section id="banner3">
-        <div class="banner-box">
-            <h2>SEASONAL SALE</h2>
-            <h3>Winter Collection -50% OFF</h3>
-        </div>
-        <div class="banner-box banner-box2">
-            <h2>NEW FOOTWEAR COLLECTION </h2>
-            <h3>Spring / Summer 2022</h3>
-        </div>
-        <div class="banner-box banner-box3">
-            <h2>T-SHIRTS</h2>
-            <h3>New Trendy Prints</h3>
-        </div>
+    <section id="pagination" class="section-p1">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#"><i class="fal fa-long-arrow-alt-right"></i></a>
     </section>
 
     <section id="newsletter" class="section-p1 section-m1">
@@ -539,17 +388,16 @@
         </div>
 
         <div class="copyright">
-@*            <p>© 2021, Tech2 etc - HTML CSS Ecommerce Template</p>*@
             <p>© 2023, WSB-NLU - Joanna Pocztańska</p>
         </div>
     </footer>
 
-    <!--  Scripts-->
+
+    <script src="script.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="../../bin/materialize.js"></script>
     <script src="js/init.js"></script>
     <script src="~/js/script.js"></script>
-
-
 </body>
+
 </html>

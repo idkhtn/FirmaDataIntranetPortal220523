@@ -22,7 +22,29 @@ namespace Firma.PortalWWW.Controllers
         {
             return View();
         }
-        public IActionResult Kontakt()
+        public IActionResult Contact()
+        {
+            return View();//widok będzienazywał się tak samo jak funkcja czyli kontakt
+        }
+
+        public IActionResult About()
+        {
+            return View();//widok będzienazywał się tak samo jak funkcja czyli kontakt
+        }
+        public IActionResult Blog()
+        {
+            return View();//widok będzienazywał się tak samo jak funkcja czyli kontakt
+        }
+        public IActionResult Cart()
+        {
+            return View();//widok będzienazywał się tak samo jak funkcja czyli kontakt
+        }
+        public IActionResult Shop()
+        {
+            return View();//widok będzienazywał się tak samo jak funkcja czyli kontakt
+        }
+
+        public IActionResult Home()
         {
             return View();//widok będzienazywał się tak samo jak funkcja czyli kontakt
         }
